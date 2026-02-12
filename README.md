@@ -1,5 +1,7 @@
 # Smart Workspace
 
+<img width="992" height="649" alt="smart_workspace" src="https://github.com/user-attachments/assets/df2ab2ba-7dcb-4d91-8653-2634abc816ee" />
+
 ## RU
 
 Учебный проект: простая канбан-доска заметок.
