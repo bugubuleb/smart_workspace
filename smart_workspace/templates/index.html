@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Workspace</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div id="authView" class="auth">
+    <div class="auth-lang"><button id="langToggleAuthBtn" type="button" class="lang-btn">EN</button></div>
+    <h2>Smart Workspace</h2>
+    <p id="authSubtitle" class="small">Личные заметки в формате канбан</p>
+
+    <div id="authError" class="error hidden"></div>
+
+    <div class="row">
+      <input id="name" class="hidden" type="text" placeholder="Имя" />
+      <input id="username" type="text" placeholder="Логин" required />
+      <input id="password" type="password" placeholder="Пароль" required />
+    </div>
+    <div class="row mt10">
+      <button id="authSubmitBtn" type="button">Войти</button>
+    </div>
+    <div class="auth-switch"><button id="authToggleBtn" type="button" class="link-btn">Регистрация</button></div>
+  </div>
+
+  <div id="boardView" class="wrap hidden">
+    <div class="topbar">
+      <div>
+        <h1>Smart Workspace</h1>
+        <div class="small"><span id="greetText">Привет,</span> <span id="usernameLabel"></span></div>
+      </div>
+      <div class="topbar-actions">
+        <button id="langToggleBoardBtn" type="button" class="lang-btn">EN</button>
+        <button id="logoutBtn" class="red">Выйти</button>
+      </div>
+    </div>
+
+    <div class="col mt12 note-form">
+      <h2 id="newNoteTitle">Новая заметка</h2>
+      <input id="newTitle" type="text" placeholder="Название заметки" />
+      <textarea id="newDescription" class="mt8" placeholder="Описание заметки..."></textarea>
+      <input id="newDeadline" class="mt8" type="date" />
+      <div class="row mt8">
+        <button id="addNoteBtn" type="button">Добавить</button>
+      </div>
+    </div>
+
+    <div class="board">
+      <div class="col" data-column="todo">
+        <h2 id="todoTitle">To do</h2>
+        <div class="dropzone" id="todo"></div>
+      </div>
+      <div class="col" data-column="doing">
+        <h2 id="doingTitle">Doing</h2>
+        <div class="dropzone" id="doing"></div>
+      </div>
+      <div class="col" data-column="done">
+        <h2 id="doneTitle">Done</h2>
+        <div class="dropzone" id="done"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
